@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Alterar Cliente</title>
+</head>
+<body>
+    <h1>Alterar Cliente - ID: <%= cliente.idcliente %></h1>
+    <form action="/alterar/<%= cliente.idcliente %>" method="POST">
+        <p>
+            <label>Nome:</label><br>
+            <input type="text" name="nome" value="<%= cliente.nome %>" required>
+        </p>
+        <p>
+            <label>Email:</label><br>
+            <input type="email" name="email" value="<%= cliente.email %>" required>
+        </p>
+        <p>
+            <label>Telefone:</label><br>
+            <input type="text" name="telefone" value="<%= cliente.telefone %>">
+        </p>
+        <p>
+            <label>Endereço:</label><br>
+            <input type="text" name="endereco" value="<%= cliente.endereco %>">
+        </p>
+        <p>
+            <label>Limite:</label><br>
+            <input type="number" step="0.01" name="limite" value="<%= cliente.limite %>" required>
+        </p>
+        <p>
+            <button type="submit">Confirmar Alteração</button>
+        </p>
+    </form>
+</body>
+</html>
